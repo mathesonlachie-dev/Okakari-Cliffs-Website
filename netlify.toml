@@ -1,0 +1,37 @@
+# Okakari Cliffs — Netlify configuration
+# Security headers are applied by Netlify's edge to every response.
+# This is the correct place for them on a static Netlify site (stronger
+# than <meta> tags — it can set HSTS, frame-ancestors, etc.).
+
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Restricts what the page may load/run. 'script-src self' (no
+    # 'unsafe-inline') blocks injected inline scripts — the main XSS defence.
+    # 'unsafe-inline' is kept ONLY for styles, which is low risk and required
+    # because the stylesheet and a few style="" attributes are inline.
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; form-action 'self'; connect-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests"
+
+    # Forces HTTPS for a year (Netlify already serves HTTPS).
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+    # Stops the browser from MIME-sniffing responses.
+    X-Content-Type-Options = "nosniff"
+
+    # Stops the site being embedded in a frame (clickjacking defence).
+    X-Frame-Options = "DENY"
+
+    # Limits referrer data leaked to other sites.
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # Denies access to powerful browser features the site doesn't use.
+    Permissions-Policy = "geolocation=(), camera=(), microphone=(), payment=(), usb=()"
+
+# Long-cache the static assets (fingerprint/replace them when they change).
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
