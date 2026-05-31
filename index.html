@@ -21,6 +21,37 @@
   <meta name="twitter:card"       content="summary_large_image">
   <meta name="robots"             content="index, follow">
 
+  <!-- Structured Data: Wedding Venue (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EventVenue",
+    "name": "Okakari Cliffs",
+    "description": "A breathtaking coastal wedding and events venue in the Auckland Region, New Zealand. Where the ocean meets elegance.",
+    "url": "https://www.okakaricliffs.co.nz/",
+    "telephone": "+64272705368",
+    "email": "hello@okakaricliffs.co.nz",
+    "image": "https://www.okakaricliffs.co.nz/images/hero.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Auckland",
+      "addressCountry": "NZ"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -36.281316,
+      "longitude": 174.791354
+    },
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Coastal Views", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Outdoor Ceremony Space", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Private Venue", "value": true }
+    ],
+    "maximumAttendeeCapacity": 300,
+    "sameAs": []
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -632,7 +663,7 @@
     }
 
     /* ── Logo + a11y additions ── */
-    .logo-wrap img.site-logo { height: 52px; width: auto; display: block; }
+    .logo-wrap img.site-logo { height: 58px; width: auto; display: block; }
     .footer-logo { height: 82px; width: auto; display: block; margin-bottom: 4px; }
     [hidden] { display: none !important; }
     .logo-wrap, .g-item, .masonry-item { outline: none; }
@@ -648,7 +679,7 @@
 <!-- ═══════ NAVIGATION ═══════ -->
 <nav>
   <div class="logo-wrap" data-page="home" aria-label="Okakari Cliffs — home">
-    <img class="site-logo" src="images/okakari-cliffs-logo.png" alt="Okakari Cliffs" width="1110" height="505">
+    <img class="site-logo" src="images/okakari-cliffs-logo.png" alt="Okakari Cliffs" width="645" height="442">
     <div class="logo-text-fallback" hidden>
       Okakari Cliffs
       <span>Auckland · New Zealand</span>
@@ -784,7 +815,7 @@
   <footer>
     <div class="footer-top">
       <div class="footer-brand">
-        <img class="footer-logo" src="images/okakari-cliffs-logo-white.png" alt="Okakari Cliffs" width="1110" height="505">
+        <img class="footer-logo" src="images/okakari-cliffs-logo-white.png" alt="Okakari Cliffs" width="645" height="442">
         <div class="logo-text-fallback" hidden>Okakari Cliffs<span>Auckland · New Zealand</span></div>
         <p>An extraordinary coastal wedding and events venue in the Auckland Region, New Zealand. Where the ocean meets elegance.</p>
         <div class="footer-social">
@@ -864,7 +895,7 @@
   <footer>
     <div class="footer-top">
       <div class="footer-brand">
-        <img class="footer-logo" src="images/okakari-cliffs-logo-white.png" alt="Okakari Cliffs" width="1110" height="505">
+        <img class="footer-logo" src="images/okakari-cliffs-logo-white.png" alt="Okakari Cliffs" width="645" height="442">
         <div class="logo-text-fallback" hidden>Okakari Cliffs<span>Auckland · New Zealand</span></div>
         <p>An extraordinary coastal wedding and events venue in the Auckland Region, New Zealand.</p>
       </div>
@@ -995,7 +1026,7 @@
   <footer>
     <div class="footer-top">
       <div class="footer-brand">
-        <img class="footer-logo" src="images/okakari-cliffs-logo-white.png" alt="Okakari Cliffs" width="1110" height="505">
+        <img class="footer-logo" src="images/okakari-cliffs-logo-white.png" alt="Okakari Cliffs" width="645" height="442">
         <div class="logo-text-fallback" hidden>Okakari Cliffs<span>Auckland · New Zealand</span></div>
         <p>An extraordinary coastal wedding and events venue in the Auckland Region, New Zealand.</p>
       </div>
@@ -1137,7 +1168,7 @@
   <footer>
     <div class="footer-top">
       <div class="footer-brand">
-        <img class="footer-logo" src="images/okakari-cliffs-logo-white.png" alt="Okakari Cliffs" width="1110" height="505">
+        <img class="footer-logo" src="images/okakari-cliffs-logo-white.png" alt="Okakari Cliffs" width="645" height="442">
         <div class="logo-text-fallback" hidden>Okakari Cliffs<span>Auckland · New Zealand</span></div>
         <p>An extraordinary coastal wedding and events venue in the Auckland Region, New Zealand.</p>
       </div>
